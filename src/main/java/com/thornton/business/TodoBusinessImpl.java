@@ -8,11 +8,11 @@ import com.thornton.data.api.TodoService;
 //TodoBusinessImpl SUT
 //TodoService dependency
 
-public class TodoBuinessImpl
+public class TodoBusinessImpl
 {
     private TodoService todoService;
 
-    public TodoBuinessImpl(TodoService todoService)
+    public TodoBusinessImpl(TodoService todoService)
     {
         this.todoService = todoService;
     }
@@ -43,18 +43,19 @@ public class TodoBuinessImpl
         }
     }
 
-    public String retrieveTodoRelatedService(String user)
+    public String retrieveTodoRelatedService(String service, String input)
     {
-        String output = ""; 
-        String getMyService = todoService.retriveService(user);
-        
-        if(getMyService.equalsIgnoreCase(output)) {
-            return getMyService; 
+        String getMyService = todoService.retriveService(service);
+
+        if (getMyService.equalsIgnoreCase(input))
+        {
+            return getMyService;
         }
-        else {
-            return "No service is here" ;
+        else
+        {
+            return "No service is here";
         }
-        
+
     }
 
 }
