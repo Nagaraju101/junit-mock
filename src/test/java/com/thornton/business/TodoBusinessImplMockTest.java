@@ -1,36 +1,33 @@
 package com.thornton.business;
 
-import static org.junit.Assert.assertEquals;
+import com.thornton.data.api.TodoService;
+import java.util.Arrays;
+import java.util.List;
+import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.mockito.InjectMocks;
+import org.mockito.Mock;
+import org.mockito.Mockito;
+import org.mockito.runners.MockitoJUnitRunner;
+
+import static org.junit.Assert.*;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
-import java.util.Arrays;
-import java.util.List;
-
-import org.junit.Test;
-import org.junit.runner.RunWith;
-import org.mockito.Mockito;
-import org.mockito.runners.MockitoJUnitRunner;
-
-import com.thornton.data.api.TodoService;
-
 @RunWith(MockitoJUnitRunner.class)
 public class TodoBusinessImplMockTest
 {
-<<<<<<< HEAD
+
     @Mock
     TodoService mockTodoService;
     //TodoService mockTodoService = mock(TodoService.class);
     
     
     @InjectMocks
-    TodoBuinessImpl todoBusinessImpl;
+    TodoBusinessImpl todoBusinessImpl;
   //TodoBuinessImpl todoBusinessImpl = new TodoBuinessImpl(mockTodoService);
     
-=======
->>>>>>> c8034ae364bf2b0029d06f25742dc2eb345ac6df
-
     @Test
     public void retrieveTodosRelatedToSpringWithMockTest()
     {

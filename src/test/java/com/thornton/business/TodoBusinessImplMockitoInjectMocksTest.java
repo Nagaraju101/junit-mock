@@ -68,7 +68,7 @@ public class TodoBusinessImplMockitoInjectMocksTest
 
         List<String> allTodos = Arrays.asList("Learn Spring MVC", "Learn Spring", "Learn to Dance");
 
-        when(todoService.retrieveTodos("Rnaga")).thenReturn(allTodos);
+        when(todoService.retrieveTodos("naga")).thenReturn(allTodos);
 
         todoBusinessImpl.deleteTodosNotRelatedToSpring("naga");
 
